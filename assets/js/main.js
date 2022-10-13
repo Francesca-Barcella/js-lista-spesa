@@ -26,14 +26,23 @@ const shoppingList = [
     '70 g di latte',
     'zucchero'
 ]
-console.log(shoppingList);
+//console.log(shoppingList);
+
+// prendere <ul> dal dom
+const listaSpesaUl = document.querySelector('.lista_spesa');
+//console.log(listaSpesaUl);
 
 // creare ciclo while - (while)
 let i = 0;
 
 while (i < shoppingList.length) {
     const listItem = shoppingList[i];
-    console.log(listItem);
+    //console.log(listItem);
     i++
+    //aggiungere <li></li> a listaSpesaUl
+    const liElement = `<li>${listItem}</li>`;
+    //console.log(liElement);
+    //inserire liElement in <ul></ul>
+    listaSpesaUl.insertAdjacentHTML('beforebegin', liElement);
 }
 
